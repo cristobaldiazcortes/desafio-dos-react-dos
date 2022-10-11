@@ -1,22 +1,16 @@
-import { useContext } from "react";
-import Contexto from "../context/Contexto";
-import Galeria from "../components/Galeria"
 
+import { useContext } from "react";
+import Galeria from "../components/Galeria";
+import Contexto from "../context/Contexto";
 
 export default function Favoritos() {
-
-  const {likedFotos} = useContext(Contexto)
-
-
+  const { likedPhotos } = useContext(Contexto);
 
   return (
-    <>
-     
-      <div >
-        < Galeria fotos ={likedFotos} />
+    
+      <div className="container">
+        <Galeria fotos={likedPhotos} />
       </div>
-      
-      
-    </>
+    
   );
 }

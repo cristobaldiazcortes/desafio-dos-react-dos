@@ -1,11 +1,15 @@
 import Galeria from "../components/Galeria";
+import { useContext } from "react";
+import Contexto from "../context/Contexto";
 
 export default function Home() {
-  return (
-    <div id="Home">
-      <h1>Natural Pic</h1>
+  const { fotos, onLike } = useContext(Contexto);
 
-      <Galeria />
-    </div>
+  return (
+    <>
+      <div className="container">
+        <Galeria fotos={fotos} onLike={onLike} />
+      </div>
+    </>
   );
 }
